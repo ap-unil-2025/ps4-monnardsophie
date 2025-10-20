@@ -16,10 +16,10 @@ def add_contact(contacts, name, phone, email=""):
 
 
 def find_contact_by_name(contacts, name):
-    for contact in contacts:
-        if contact['name'].lower==name.lower:
-            return contact
-    return None
+    for i in contacts :
+        if i["name"].lower()== name.lower():
+            return i 
+        else : return None
 
 def search_contacts(contacts, search_term):
     results = []
@@ -35,9 +35,9 @@ def search_contacts(contacts, search_term):
 
 
 def delete_contact(contacts, name):
-    for i, contact in enumerate(contacts):
-        if contact['name'].lower==name.lower():
-            contacts.pop(i)
+    for index, contact in enumerate(contacts):
+        if contact["name"] == name:
+            contacts.pop(index)
             return True
     return False
 

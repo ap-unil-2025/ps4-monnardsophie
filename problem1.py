@@ -51,17 +51,16 @@ def remove_duplicates(items):
 
 
 def merge_lists(list1, list2):
-    merged = []
-    max_length = max(len(list1), len(list2))
-    
-    for i in range(max_length):
+    result = []
+    max_len = max(len(list1), len(list2))
+
+    for i in range(max_len):
         if i < len(list1):
-            merged.append(list1[i])
-            if i < len(list2):
-                merged.append(list2[i])
+            result.append(list1[i])
+        if i < len(list2):
+            result.append(list2[i])
 
-    return merged
-
+    return result
 
 def list_statistics(numbers):
 
